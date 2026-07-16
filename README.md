@@ -1,4 +1,5 @@
 # GameJam
 The creators:
-* IsmagilovAinaz
-* Karsak2003
+* _IsmagilovAinaz_
+* _Karsak2003_
+* _Rush-IT_
