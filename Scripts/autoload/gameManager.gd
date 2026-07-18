@@ -8,7 +8,9 @@ signal s_GameStarted
 signal s_GameOver(victory: bool)
 signal s_WaveCompleted
 
-var currectState: GameState = GameState.MENU
+#var currectState: GameState = GameState.MENU
+var currectState: GameState = GameState.PLAYING
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

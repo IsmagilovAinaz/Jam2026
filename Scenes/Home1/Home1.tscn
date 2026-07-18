@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c4xmp6b78u4ms"]
+
+[ext_resource type="PackedScene" uid="uid://b4s7ys74v2oqc" path="res://Assets/KayKitMedievalHexagon/Assets/gltf/buildings/blue/building_home_B_blue.gltf" id="1_5mnwj"]
+[ext_resource type="Script" uid="uid://dbryn3kwr0cmm" path="res://Scripts/tools/tower_1.gd" id="2_uvt7g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l4pdb"]
+
+[node name="building_home_B_blue2" unique_id=1592679339 node_paths=PackedStringArray("meshes") instance=ExtResource("1_5mnwj")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+script = ExtResource("2_uvt7g")
+meshes = [NodePath("building_home_B_blue")]
+
+[node name="Area3D" type="Area3D" parent="building_home_B_blue" parent_id_path=PackedInt32Array(390905309) index="0" unique_id=1950235997]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="building_home_B_blue/Area3D" index="0" unique_id=1373819573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
+shape = SubResource("BoxShape3D_l4pdb")
+
+[node name="Ray_1" type="RayCast3D" parent="building_home_B_blue" parent_id_path=PackedInt32Array(390905309) index="1" unique_id=1288839940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, 0.5)
+target_position = Vector3(0, -0.125, 0)
+
+[node name="Ray_2" type="RayCast3D" parent="building_home_B_blue" parent_id_path=PackedInt32Array(390905309) index="2" unique_id=1653752650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, -0.5)
+target_position = Vector3(0, -0.125, 0)
+
+[node name="Ray_3" type="RayCast3D" parent="building_home_B_blue" parent_id_path=PackedInt32Array(390905309) index="3" unique_id=2105175318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.125, 0.5)
+target_position = Vector3(0, -0.125, 0)
+
+[node name="Ray_4" type="RayCast3D" parent="building_home_B_blue" parent_id_path=PackedInt32Array(390905309) index="4" unique_id=1433754264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.125, -0.5)
+target_position = Vector3(0, -0.125, 0)
