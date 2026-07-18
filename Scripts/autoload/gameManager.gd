@@ -15,7 +15,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	pass # Replace with function body.
 
-func _init(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventKey and  event.pressed():
 		match event.keycode:
 			KEY_ESCAPE when currectState == GameState.PLAYING:

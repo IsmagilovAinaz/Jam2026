@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ck3oxmepdmwav" path="res://Scenes/Towers/siege_ballista_2.tscn" id="2_jg1gm"]
 [ext_resource type="PackedScene" uid="uid://bw2ihlfe8cvmg" path="res://Assets/KenneyCastleKit/GLB format/tower-top.glb" id="3_sjlac"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bjdyf"]
+
 [node name="Tower1" unique_id=1833646115 instance=ExtResource("1_wodjy")]
 
 [node name="tower-weapon" type="Node3D" parent="." index="0" unique_id=868314824]
@@ -14,3 +16,25 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.02362883, 0)
 
 [node name="tower-top2" parent="." index="1" unique_id=778296174 instance=ExtResource("3_sjlac")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3085846, 0)
+
+[node name="Area3D" type="Area3D" parent="tower-base" parent_id_path=PackedInt32Array(1991348936) index="0" unique_id=427147919]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tower-base/Area3D" index="0" unique_id=1644253930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
+shape = SubResource("BoxShape3D_bjdyf")
+
+[node name="Ray_1" type="RayCast3D" parent="tower-base" parent_id_path=PackedInt32Array(1991348936) index="1" unique_id=1003774850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, 0.5)
+target_position = Vector3(0, -0.125, 0)
+
+[node name="Ray_2" type="RayCast3D" parent="tower-base" parent_id_path=PackedInt32Array(1991348936) index="2" unique_id=641625812]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, -0.5)
+target_position = Vector3(0, -0.125, 0)
+
+[node name="Ray_3" type="RayCast3D" parent="tower-base" parent_id_path=PackedInt32Array(1991348936) index="3" unique_id=533906651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.125, 0.5)
+target_position = Vector3(0, -0.125, 0)
+
+[node name="Ray_4" type="RayCast3D" parent="tower-base" parent_id_path=PackedInt32Array(1991348936) index="4" unique_id=864226719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.125, -0.5)
+target_position = Vector3(0, -0.125, 0)
