@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cbmm7buf1wu73" path="res://Assets/Skyboxes/skybox-day.png" id="1_j0hr5"]
 [ext_resource type="PackedScene" uid="uid://c73dif7axome7" path="res://Scenes/Enemies/skeleton_warrior.tscn" id="3_g6kna"]
+[ext_resource type="PackedScene" uid="uid://c4xmp6b78u4ms" path="res://Scenes/Home1.tscn" id="3_xbxit"]
+[ext_resource type="PackedScene" uid="uid://buk5ecui3nwvk" path="res://Scenes/Towers/tower_1.tscn" id="4_xbxit"]
+[ext_resource type="PackedScene" uid="uid://dlwu0hik2s83a" path="res://Scenes/IsometricCamera.tscn" id="5_tq2o1"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_j0im4"]
 panorama = ExtResource("1_j0hr5")
@@ -25,9 +28,6 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=401903723]
 environment = SubResource("Environment_2dd1r")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1644674526]
-transform = Transform3D(1, 0, 0, 0, 0.8128778, 0.58243436, 0, -0.58243436, 0.8128778, 0, 6.3710814, -16.755623)
-
 [node name="Skeleton_Warrior" parent="." unique_id=832175957 instance=ExtResource("3_g6kna")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8873286, 0.62842774, -24.767794)
 visible = false
@@ -36,3 +36,15 @@ visible = false
 visible = false
 size = Vector3(1000, 1, 1000)
 material = SubResource("StandardMaterial3D_2dd1r")
+
+[node name="building_home_B_blue2" parent="." unique_id=1592679339 instance=ExtResource("3_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 6.6126347, 0, -30.021736)
+
+[node name="building_home_B_blue3" parent="." unique_id=543170190 instance=ExtResource("3_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 28.110899, 0, -29.003258)
+
+[node name="Tower1" parent="." unique_id=1833646115 instance=ExtResource("4_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -10.7810545, 0, -32.343872)
+
+[node name="CameraPivot" parent="." unique_id=566448782 instance=ExtResource("5_tq2o1")]
+maxZoom = 100

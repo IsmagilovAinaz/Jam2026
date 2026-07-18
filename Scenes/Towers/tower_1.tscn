@@ -7,6 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_bjdyf"]
 
 [node name="Tower1" unique_id=1833646115 instance=ExtResource("1_wodjy")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="tower-weapon" type="Node3D" parent="." index="0" unique_id=868314824]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
