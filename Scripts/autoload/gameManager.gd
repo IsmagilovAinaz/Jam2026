@@ -16,7 +16,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and  event.pressed():
+	if event is InputEventKey and  event.is_pressed():
 		match event.keycode:
 			KEY_ESCAPE when currectState == GameState.PLAYING:
 				gamePased()

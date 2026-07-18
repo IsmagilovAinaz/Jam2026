@@ -33,7 +33,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8873286, 0.62842774, -24.7
 visible = false
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=879260453]
-visible = false
 size = Vector3(1000, 1, 1000)
 material = SubResource("StandardMaterial3D_2dd1r")
 
