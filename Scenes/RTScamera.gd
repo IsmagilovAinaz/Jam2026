@@ -15,8 +15,6 @@ extends Node3D
 @export var min_zoom: float = -20
 @export var max_zoom: float = 20.0
 @export var mouse_sens: float = 0.2
-@export var edge_size: float = 5
-@export var scroll_speed: float = 0.2
 
 
 var move_target: Vector3
@@ -44,16 +42,6 @@ func _process(delta: float) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	var scroll_direction = Vector3.ZERO
-	if mouse_pos.x < edge_size:
-		scroll_direction.x = -1
-	elif mouse_pos.x > vieport_size.x - edge_size:
-		scroll_direction.x = 1
-	
-	if mouse_pos.y < edge_size:
-		scroll_direction.z = -1
-	elif mouse_pos.y > vieport_size.y - edge_size:
-		scroll_direction.z = 1
-	move_target += transform.basis * scroll_direction * scroll_speed
 	
 	var direction = Vector2.ZERO
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
