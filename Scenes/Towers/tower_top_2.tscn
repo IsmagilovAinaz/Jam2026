@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://33maptoijvdw"]
+
+[ext_resource type="PackedScene" uid="uid://bw2ihlfe8cvmg" path="res://Assets/KenneyCastleKit/GLB format/tower-top.glb" id="1_jhgj6"]
+
+[node name="tower-top2" unique_id=778296174 instance=ExtResource("1_jhgj6")]
