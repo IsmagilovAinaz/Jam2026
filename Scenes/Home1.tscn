@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c4xmp6b78u4ms"]
+
+[ext_resource type="PackedScene" uid="uid://b4s7ys74v2oqc" path="res://Assets/KayKitMedievalHexagon/Assets/gltf/buildings/blue/building_home_B_blue.gltf" id="1_021bd"]
+
+[node name="building_home_B_blue2" unique_id=1592679339 instance=ExtResource("1_021bd")]
