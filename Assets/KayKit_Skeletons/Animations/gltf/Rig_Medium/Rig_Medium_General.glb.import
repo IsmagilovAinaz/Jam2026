@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="animation_library"
 importer_version=1
-type="PackedScene"
+type="AnimationLibrary"
 uid="uid://3lyojl06r8y1"
-path="res://.godot/imported/Rig_Medium_General.glb-0eef1ba5f56dcd5760d9539c407d9dce.scn"
+path="res://.godot/imported/Rig_Medium_General.glb-0eef1ba5f56dcd5760d9539c407d9dce.res"
 
 [deps]
 
 source_file="res://Assets/KayKit_Skeletons/Animations/gltf/Rig_Medium/Rig_Medium_General.glb"
-dest_files=["res://.godot/imported/Rig_Medium_General.glb-0eef1ba5f56dcd5760d9539c407d9dce.scn"]
+dest_files=["res://.godot/imported/Rig_Medium_General.glb-0eef1ba5f56dcd5760d9539c407d9dce.res"]
 
 [params]
 

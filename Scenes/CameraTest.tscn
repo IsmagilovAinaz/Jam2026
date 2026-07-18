@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://ckxhukexyek6s"]
 
 [ext_resource type="Texture2D" uid="uid://cbmm7buf1wu73" path="res://Assets/Skyboxes/skybox-day.png" id="1_j0hr5"]
-[ext_resource type="MeshLibrary" uid="uid://ctmmmj2bkjcvl" path="res://Assets/tiles.meshlib" id="2_g6kna"]
+[ext_resource type="PackedScene" uid="uid://c73dif7axome7" path="res://Scenes/Enemies/skeleton_warrior.tscn" id="3_g6kna"]
+[ext_resource type="PackedScene" uid="uid://c4xmp6b78u4ms" path="res://Scenes/Home1.tscn" id="3_xbxit"]
+[ext_resource type="PackedScene" uid="uid://buk5ecui3nwvk" path="res://Scenes/Towers/tower_1.tscn" id="4_xbxit"]
+[ext_resource type="Script" uid="uid://df3j1ia3jgkvd" path="res://Scenes/RTScamera.gd" id="5_tq2o1"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_j0im4"]
 panorama = ExtResource("1_j0hr5")
@@ -13,14 +16,51 @@ sky_material = SubResource("PanoramaSkyMaterial_j0im4")
 background_mode = 2
 sky = SubResource("Sky_olryk")
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_2dd1r"]
+vertices = PackedVector3Array(-14, 1, -37.75, -10.75, 1, -38.5, -10.75, 1, -499, -16, 1, -35.75, -17, 1, -32.25, -499, 1, -499, -499, 1, -32.25, 2.25, 1, -35.25, 5.5, 1, -35.25, 6.5, 1, -36.5, -8, 1, -38, -5.75, 1, -36, -4.75, 1, -32, 1.25, 1, -31.75, 1.25, 1, -34.25, -4.75, 1, -34.25, 8, 1, -36.5, 8, 1, -499, 23.75, 1, -34.25, 27, 1, -34.25, 28, 1, -35.5, 12, 1, -32, 22.75, 1, -31.75, 22.75, 1, -33.25, 12, 1, -34.25, 9.5, 1, -36.5, 29.5, 1, -35.5, 29.5, 1, -499, 31, 1, -35.5, 33.5, 1, -33.25, 33.5, 1, -31.25, 499, 1, -31.25, 499, 1, -499, -7, 1, -31.25, -7, 1, -33.5, -7.5, 1, -34.5, -9.5, 1, -36, -11.5, 1, -28.5, -10, 1, -28.5, -8.25, 1, -29.25, -11, 1, -36.25, -13.25, 1, -35.5, -14.5, 1, -33.5, -14, 1, -30, -12.5, 13.5, -33.75, -11.5, 13.5, -34.5, -12, 13.5, -34.75, -13, 13.5, -34, 7.75, 11.75, -31.5, 7.5, 10.75, -32.5, 6.5, 10, -33.25, 3.25, 10, -33.5, 3.25, 12, -31.5, 4.25, 2.5, -32.5, 4.25, 2.5, -29, 9, 2.5, -29, 9, 2.5, -32.5, 4.25, 6.75, -32.5, 4.25, 6.75, -29, 9, 6.75, -29, 9, 6.75, -32.5, 29, 11.75, -30.5, 29, 10.75, -31.5, 28, 10, -32.25, 24.75, 10, -32.5, 24.75, 12, -30.5, -16.25, 1, -29.25, -14, 1, -27, -12.25, 1, -26.25, -499, 1, 499, -10.75, 1, 499, -10.75, 1, -26.25, 5.5, 1, -24.75, 5.5, 1, -26, 2.25, 1, -26, 6.25, 1, -24, -4.75, 1, -30.5, 1.25, 1, -27, -5.5, 1, -29, -9.25, 1, -26.25, 8, 1, 499, -7.5, 1, -27, 8, 1, -24, 22.5, 1, -28.5, 12, 1, -28.5, 25.75, 2.5, -31.5, 25.75, 2.5, -28, 30.5, 2.5, -28, 30.5, 2.5, -31.5, 25.75, 6.75, -31.5, 25.75, 6.75, -28, 30.5, 6.75, -28, 30.5, 6.75, -31.5, 33.5, 1, -28, 499, 1, -28, -12.5, 13.5, -30.25, -11.5, 13.5, -30, -12, 13.5, -30.75, -13, 13.5, -31, 12, 1, -27.25, 10.5, 1, -26, 10.5, 1, -24.75, 23.75, 1, -25, 22.75, 1, -26, 27, 1, -23.75, 27, 1, -25, 27.75, 1, -23, 9.75, 1, -24, 29.5, 1, 499, 29.5, 1, -23, 33.5, 1, -26, 32, 1, -25, 32, 1, -23.75, 31.25, 1, -23, 499, 1, 499)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 4, 2), PackedInt32Array(2, 4, 6), PackedInt32Array(2, 6, 5), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 11), PackedInt32Array(9, 11, 10), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(9, 10, 16), PackedInt32Array(16, 10, 1), PackedInt32Array(16, 1, 2), PackedInt32Array(16, 2, 17), PackedInt32Array(14, 15, 7), PackedInt32Array(7, 15, 11), PackedInt32Array(20, 19, 18), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 24), PackedInt32Array(20, 25, 26), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 17), PackedInt32Array(18, 23, 24), PackedInt32Array(24, 25, 18), PackedInt32Array(18, 25, 20), PackedInt32Array(25, 16, 17), PackedInt32Array(28, 26, 27), PackedInt32Array(31, 30, 29), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 32), PackedInt32Array(29, 32, 31), PackedInt32Array(34, 33, 35), PackedInt32Array(35, 33, 36), PackedInt32Array(38, 37, 39), PackedInt32Array(39, 37, 33), PackedInt32Array(36, 41, 40), PackedInt32Array(42, 41, 43), PackedInt32Array(43, 41, 37), PackedInt32Array(37, 41, 36), PackedInt32Array(37, 36, 33), PackedInt32Array(47, 46, 44), PackedInt32Array(44, 46, 45), PackedInt32Array(49, 48, 50), PackedInt32Array(50, 48, 51), PackedInt32Array(51, 48, 52), PackedInt32Array(56, 55, 53), PackedInt32Array(53, 55, 54), PackedInt32Array(60, 59, 57), PackedInt32Array(57, 59, 58), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 65), PackedInt32Array(63, 65, 64), PackedInt32Array(6, 4, 66), PackedInt32Array(6, 66, 67), PackedInt32Array(67, 68, 6), PackedInt32Array(6, 68, 70), PackedInt32Array(6, 70, 69), PackedInt32Array(68, 71, 70), PackedInt32Array(74, 73, 72), PackedInt32Array(75, 74, 72), PackedInt32Array(76, 12, 13), PackedInt32Array(76, 13, 78), PackedInt32Array(78, 13, 77), PackedInt32Array(79, 74, 71), PackedInt32Array(71, 74, 75), PackedInt32Array(71, 75, 70), PackedInt32Array(70, 75, 80), PackedInt32Array(77, 74, 78), PackedInt32Array(78, 74, 81), PackedInt32Array(75, 82, 80), PackedInt32Array(79, 81, 74), PackedInt32Array(83, 84, 22), PackedInt32Array(22, 84, 21), PackedInt32Array(88, 87, 85), PackedInt32Array(85, 87, 86), PackedInt32Array(92, 91, 89), PackedInt32Array(89, 91, 90), PackedInt32Array(30, 31, 93), PackedInt32Array(93, 31, 94), PackedInt32Array(98, 97, 95), PackedInt32Array(95, 97, 96), PackedInt32Array(100, 99, 101), PackedInt32Array(101, 99, 103), PackedInt32Array(101, 103, 102), PackedInt32Array(102, 105, 104), PackedInt32Array(104, 106, 102), PackedInt32Array(102, 106, 101), PackedInt32Array(101, 106, 107), PackedInt32Array(84, 83, 99), PackedInt32Array(99, 83, 103), PackedInt32Array(106, 109, 108), PackedInt32Array(107, 106, 82), PackedInt32Array(82, 106, 80), PackedInt32Array(80, 106, 108), PackedInt32Array(111, 110, 112), PackedInt32Array(112, 110, 94), PackedInt32Array(110, 93, 94), PackedInt32Array(108, 109, 113), PackedInt32Array(112, 94, 113), PackedInt32Array(113, 94, 108), PackedInt32Array(108, 94, 114)]
+agent_radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dd1r"]
+albedo_color = Color(0.14785391, 0.56333137, 0.22178149, 1)
+
 [node name="CameraTest" type="Node3D" unique_id=2091552342]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1340218215]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5709581, 0)
+transform = Transform3D(1, 0, 0, 0, 0.90829027, 0.4183405, 0, -0.4183405, 0.90829027, 0, 6.028296, 0)
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=401903723]
 environment = SubResource("Environment_2dd1r")
 
-[node name="GridMap" type="GridMap" parent="." unique_id=949187664]
-mesh_library = ExtResource("2_g6kna")
-cell_size = Vector3(0.25, 0.25, 0.25)
+[node name="Skeleton_Warrior" parent="." unique_id=832175957 node_paths=PackedStringArray("followNode") instance=ExtResource("3_g6kna")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.34112, 0.62842774, -11.415869)
+followNode = NodePath("../NavigationRegion3D/building_home_B_blue2")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1001684468]
+navigation_mesh = SubResource("NavigationMesh_2dd1r")
+
+[node name="Ground" type="CSGBox3D" parent="NavigationRegion3D" unique_id=879260453]
+use_collision = true
+size = Vector3(1000, 1, 1000)
+material = SubResource("StandardMaterial3D_2dd1r")
+
+[node name="building_home_B_blue2" parent="NavigationRegion3D" unique_id=1592679339 instance=ExtResource("3_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 6.6126347, 0, -30.021736)
+
+[node name="building_home_B_blue3" parent="NavigationRegion3D" unique_id=543170190 instance=ExtResource("3_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 28.110899, 0, -29.003258)
+
+[node name="Tower1" parent="NavigationRegion3D" unique_id=1833646115 instance=ExtResource("4_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -10.7810545, 0, -32.343872)
+
+[node name="CameraPosition" type="Node3D" parent="." unique_id=526543086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29.654829, 25.271976)
+script = ExtResource("5_tq2o1")
+
+[node name="CameraRotationX" type="Node3D" parent="CameraPosition" unique_id=1141452942]
+
+[node name="CameraZoomPivot" type="Node3D" parent="CameraPosition/CameraRotationX" unique_id=527192502]
+transform = Transform3D(1, 0, 0, 0, 0.76604444, 0.6427876, 0, -0.6427876, 0.76604444, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPosition/CameraRotationX/CameraZoomPivot" unique_id=345942357]

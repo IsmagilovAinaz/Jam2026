@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b5tumyggpf4ig"]
+
+[ext_resource type="PackedScene" uid="uid://dlgtgj4oqow7t" path="res://Assets/KayKit_Skeletons/assets/gltf/Skeleton_Blade.gltf" id="1_hhsur"]
+
+[node name="Skeleton_Blade2" unique_id=672184686 instance=ExtResource("1_hhsur")]
