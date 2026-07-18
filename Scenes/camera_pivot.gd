@@ -29,7 +29,6 @@ func _camera_movement():
 	
 	global_position += (global_basis * Vector3(direction.x, 0, direction.y)).normalized() * cameraSpeed
 	
-	print(global_position)
 
 func _camera_zoom():
 	var zoomChange: int = 0
