@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6dudl6vbrrgw"]
+
+[ext_resource type="Script" uid="uid://b40dmc3i03tce" path="res://Scripts/autoload/economy_manager.gd" id="1_hp70n"]
+
+[node name="EconomyManager" type="Node3D" unique_id=2057669742]
+script = ExtResource("1_hp70n")

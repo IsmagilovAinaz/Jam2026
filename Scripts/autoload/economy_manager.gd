@@ -27,5 +27,8 @@ func spend_gold(amount: int) -> bool:
 func add_gold(amount: int) -> void:
 	gold += amount
 
-func _on_gold_generated(amount: int, _source: Node) -> void:
+func _on_gold_generated(amount: int, _source: Node3D) -> void:
 	add_gold(amount)
+	
+func _process(delta: float) -> void:
+	print(current_gold)

@@ -40,16 +40,16 @@ followNode = NodePath("../NavigationRegion3D/building_home_B_blue2")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1001684468]
 navigation_mesh = SubResource("NavigationMesh_2dd1r")
 
+[node name="building_home_B_blue3" parent="NavigationRegion3D" unique_id=1407543833 instance=ExtResource("3_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 28.798355, 0.50000215, -28.743952)
+
+[node name="building_home_B_blue2" parent="NavigationRegion3D" unique_id=1592679339 instance=ExtResource("3_xbxit")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 6.652416, 0.50000215, -29.675262)
+
 [node name="Ground" type="CSGBox3D" parent="NavigationRegion3D" unique_id=879260453]
 use_collision = true
 size = Vector3(1000, 1, 1000)
 material = SubResource("StandardMaterial3D_2dd1r")
-
-[node name="building_home_B_blue2" parent="NavigationRegion3D" unique_id=1592679339 instance=ExtResource("3_xbxit")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 6.6126347, 0, -30.021736)
-
-[node name="building_home_B_blue3" parent="NavigationRegion3D" unique_id=543170190 instance=ExtResource("3_xbxit")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 28.110899, 0, -29.003258)
 
 [node name="Tower1" parent="NavigationRegion3D" unique_id=1833646115 instance=ExtResource("4_xbxit")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -10.7810545, 0, -32.343872)

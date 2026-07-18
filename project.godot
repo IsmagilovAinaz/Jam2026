@@ -17,9 +17,8 @@ config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-EventBus="*uid://k83uhpse018l"
-GridManager="*uid://cixjjeif05j3y"
-EconomyManager="*uid://b443664dc4uno"
+EventBus="*uid://okhwoibw7vpe"
+EconomyManager="*uid://b40dmc3i03tce"
 
 [display]
 

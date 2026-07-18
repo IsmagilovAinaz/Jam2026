@@ -4,7 +4,7 @@ extends Node
 
 # --- Экономика ---
 signal gold_changed(new_amount: int)
-signal gold_generated(amount: int, source: Node)          # источник — конкретное здание
+signal gold_generated(amount: int, source: Node3D)          # источник — конкретное здание
 signal gold_spend_failed(required: int, available: int)   # для UI (тряска кнопки и т.п.)
 
 # --- Здания ---

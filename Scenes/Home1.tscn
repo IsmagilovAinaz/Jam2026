@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://c4xmp6b78u4ms"]
 
 [ext_resource type="PackedScene" uid="uid://b4s7ys74v2oqc" path="res://Assets/KayKitMedievalHexagon/Assets/gltf/buildings/blue/building_home_B_blue.gltf" id="1_021bd"]
+[ext_resource type="Script" uid="uid://hriejd845m45" path="res://Scripts/components/gold_generator_component.gd" id="2_hpenh"]
 
 [node name="building_home_B_blue2" unique_id=1592679339 instance=ExtResource("1_021bd")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="GoldGeneratorComponent" type="Node" parent="." index="1" unique_id=1575556608]
+script = ExtResource("2_hpenh")
+metadata/_custom_type_script = "uid://hriejd845m45"

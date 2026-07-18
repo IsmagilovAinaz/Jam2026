@@ -1,5 +1,6 @@
 extends Node
 class_name GoldGeneratorComponent
+@onready var parent_node = get_parent()
 ## Компонент пассивного дохода. Тикает по таймеру и шлёт золото
 ## через EventBus — сам EconomyManager ничего не знает о конкретных зданиях,
 ## он просто слушает gold_generated и прибавляет золото.
@@ -17,6 +18,7 @@ func _ready() -> void:
 	_timer.one_shot = false
 	_timer.timeout.connect(_on_tick)
 	add_child(_timer)
+	print(parent_node)
 	if auto_start:
 		start()
 
@@ -39,4 +41,4 @@ func stop() -> void:
 func _on_tick() -> void:
 	if _paused:
 		return
-	EventBus.gold_generated.emit(gold_per_tick, get_parent())
+	EventBus.gold_generated.emit(gold_per_tick, parent_node)
