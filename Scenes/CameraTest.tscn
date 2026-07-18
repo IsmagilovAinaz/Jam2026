@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ckxhukexyek6s"]
+
+[ext_resource type="Texture2D" uid="uid://cbmm7buf1wu73" path="res://Assets/Skyboxes/skybox-day.png" id="1_j0hr5"]
+[ext_resource type="MeshLibrary" uid="uid://ctmmmj2bkjcvl" path="res://Assets/tiles.meshlib" id="2_g6kna"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_j0im4"]
+panorama = ExtResource("1_j0hr5")
+
+[sub_resource type="Sky" id="Sky_olryk"]
+sky_material = SubResource("PanoramaSkyMaterial_j0im4")
+
+[sub_resource type="Environment" id="Environment_2dd1r"]
+background_mode = 2
+sky = SubResource("Sky_olryk")
+
+[node name="CameraTest" type="Node3D" unique_id=2091552342]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1340218215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5709581, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=401903723]
+environment = SubResource("Environment_2dd1r")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=949187664]
+mesh_library = ExtResource("2_g6kna")
+cell_size = Vector3(0.25, 0.25, 0.25)
